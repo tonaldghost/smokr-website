@@ -5,10 +5,26 @@ import {
   GithubLogoIcon,
 } from "@phosphor-icons/react";
 import Link from "next/link";
+import { DottedGlowBackground } from "./ui/dotted-glow-background";
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-900 border-t border-neutral-800">
+    <footer className="bg-neutral-900 border-t border-neutral-800 relative">
+      <DottedGlowBackground
+        className="pointer-events-none mask-radial-to-90% mask-radial-at-center opacity-10"
+        opacity={1}
+        gap={10}
+        radius={1.6}
+        colorLightVar="--color-neutral-200"
+        glowColorLightVar="--color-neutral-100"
+        colorDarkVar="--color-neutral-200"
+        glowColorDarkVar="--color-neutral-50"
+        backgroundOpacity={0}
+        speedMin={0.3}
+        speedMax={1.6}
+        speedScale={1}
+      />
+
       <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-10">
         <div className="flex items-center justify-between gap-6 max-md:flex-col">
           {/* Brand Logo */}

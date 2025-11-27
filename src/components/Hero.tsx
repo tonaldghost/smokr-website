@@ -1,5 +1,6 @@
 import { StarIcon } from "@phosphor-icons/react";
 import Image from "next/image";
+import { DottedGlowBackground } from "./ui/dotted-glow-background";
 
 export default function Hero() {
   return (
@@ -54,31 +55,54 @@ export default function Hero() {
 
         {/* Right Content - Phone Mockups */}
         <div className="relative flex justify-center lg:pl-30">
+          <DottedGlowBackground
+            className="pointer-events-none mask-radial-to-90% mask-radial-at-center opacity-80"
+            opacity={1}
+            gap={10}
+            radius={1.6}
+            colorLightVar="--color-neutral-500"
+            glowColorLightVar="--color-neutral-600"
+            colorDarkVar="--color-neutral-500"
+            glowColorDarkVar="--color-neutral-900"
+            backgroundOpacity={0}
+            speedMin={0.3}
+            speedMax={1.6}
+            speedScale={1}
+          />
           <div className="relative">
             {/* Main Phone */}
             <div className="relative z-10 bg-black rounded-[2.5rem] p-2 shadow-2xl">
-              <div className="bg-gray-900 rounded-[2rem] overflow-hidden w-72 h-[600px] relative">
+              <div className="bg-gray-900 rounded-[2rem] overflow-hidden w-72 h-[640px] relative">
                 {/* Status Bar */}
-                <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-black/50 to-transparent z-20 flex items-center justify-between px-6 text-white text-sm">
+                {/*<div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-black/50 to-transparent z-20 flex items-center justify-between px-6 text-white text-sm">
                   <span>9:41</span>
                   <div className="flex items-center space-x-1">
                     <div className="w-4 h-2 bg-white rounded-sm"></div>
                     <div className="w-4 h-2 bg-white rounded-sm"></div>
                     <div className="w-4 h-2 bg-white rounded-sm"></div>
                   </div>
-                </div>
+                </div>*/}
 
                 {/* Phone Content */}
-                <div className="w-full h-full bg-gray-100"></div>
+                <div className="w-full h-full bg-gray-100">
+                  <video
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  >
+                    <source src="/video.MP4" type="video/mp4" />
+                  </video>
+                </div>
 
                 {/* Bottom UI */}
               </div>
             </div>
 
             {/* Secondary Phone */}
-            <div className="absolute -right-8 top-12 bg-black rounded-[2rem] p-2 shadow-xl transform rotate-6 z-0">
-              <div className="bg-white rounded-[1.5rem] overflow-hidden w-64 h-[520px] relative">
-                {/* Status Bar */}
+            {/*<div className="absolute -right-8 top-12 bg-black rounded-[2rem] p-2 shadow-xl transform rotate-6 z-0">
+              <div className="bg-white rounded-[1.5rem] overflow-hidden w-64 h-[580px] relative">
                 <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-black/10 to-transparent z-20 flex items-center justify-between px-6 text-black text-sm">
                   <span>9:41</span>
                   <div className="flex items-center space-x-1">
@@ -88,10 +112,16 @@ export default function Hero() {
                   </div>
                 </div>
 
-                {/* Content */}
-                <div className="w-full h-full bg-gray-50"></div>
+                <div className="w-full h-full bg-gray-50">
+                  <Image
+                    src="/screen-capture-1.jpg"
+                    alt="App Screenshot"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
               </div>
-            </div>
+            </div>*/}
           </div>
         </div>
       </div>
