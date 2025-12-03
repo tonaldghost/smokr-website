@@ -9,6 +9,7 @@ import {
   BugIcon,
   LightbulbIcon,
 } from "@phosphor-icons/react";
+import Link from "next/link";
 
 export default function Support() {
   return (
@@ -137,12 +138,12 @@ export default function Support() {
                       Absolutely. We take your privacy seriously. Your data is
                       encrypted and stored securely. We never sell your personal
                       information. Read our{" "}
-                      <a
+                      <Link
                         href="/privacy"
                         className="text-neutral-900 underline hover:text-gray-700"
                       >
                         Privacy Policy
-                      </a>{" "}
+                      </Link>{" "}
                       for more details.
                     </p>
                   </div>

@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Terms() {
   return (
@@ -160,12 +161,12 @@ export default function Terms() {
               <p className="text-gray-700 leading-relaxed mb-4">
                 If you have any questions about these Terms of Service, please
                 contact us at{" "}
-                <a
+                <Link
                   href="/support"
                   className="text-neutral-900 underline hover:text-gray-700"
                 >
                   our support page
-                </a>
+                </Link>
                 .
               </p>
             </section>

@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Privacy() {
   return (
@@ -184,12 +185,12 @@ export default function Privacy() {
               </ul>
               <p className="text-gray-700 leading-relaxed mb-4 mt-4">
                 To exercise these rights, please contact us through our{" "}
-                <a
+                <Link
                   href="/support"
                   className="text-neutral-900 underline hover:text-gray-700"
                 >
                   support page
-                </a>
+                </Link>
                 .
               </p>
             </section>
@@ -237,12 +238,12 @@ export default function Privacy() {
               <p className="text-gray-700 leading-relaxed mb-4">
                 If you have any questions or concerns about this Privacy Policy,
                 please contact us at{" "}
-                <a
+                <Link
                   href="/support"
                   className="text-neutral-900 underline hover:text-gray-700"
                 >
                   our support page
-                </a>
+                </Link>
                 .
               </p>
             </section>
